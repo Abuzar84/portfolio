@@ -1,4 +1,11 @@
-import { createClient } from '@supabase/supabase-js';
+     // utils/supabaseClient.js
+     import { createClient } from '@supabase/supabase-js';
 
+     const supabaseUrl = process.env.SUPABASE_URL;
+     const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
 
-export const supabase = createClient('https://pnhjbnxaxkilxfgkcdbh.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuaGpibnhheGtpbHhmZ2tjZGJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2NTY3MDEsImV4cCI6MjA3ODIzMjcwMX0.Ex6ziITvDmYeDBNL6HSGujtNzlWtDVikeBosCkJx-3o')
+     export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+     // For server-side operations (e.g., inserts), use service_role
+    //  export const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROLE_KEY);
+     
