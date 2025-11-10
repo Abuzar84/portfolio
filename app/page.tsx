@@ -23,6 +23,36 @@ function Home() {
     const SkillsRef = React.useRef<HTMLDivElement>(null);
     const ContactRef = React.useRef<HTMLDivElement>(null);
 
+    //function for form handle
+    // States for form fields (removed title, added email/message)
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+
+        // Call API route instead of direct Supabase insert
+        const response = await fetch('/api/route', { // Adjust path if route.js is in /api/route.js
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, message }),
+        });
+
+        if (!response.ok) {
+        console.error('Error:', await response.json());
+        alert('Failed to send message!');
+        } else {
+        console.log('Success:', await response.json());
+        alert('Message sent successfully!');
+        setEmail(''); // Reset form
+        setMessage('');
+        }
+
+        setLoading(false);
+    };
+
     // Function to scroll to sections
     const scrolltoref = (ref: React.RefObject<HTMLDivElement | null>) => {
         ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -190,11 +220,13 @@ function Home() {
                 {/* Contact Section – Expanded with Form */}
                 <section ref={ContactRef} className="py-16 bg-linear-to-b from-gray-100 to-gray-200 text-center">
                     <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
-                    <form className="max-w-md mx-auto space-y-4 mb-8">
+                    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 mb-8">
                         <input 
                             type="email" 
                             name="email"
                             placeholder="Your Email" 
+                            value={email} // Bind state
+                            onChange={(e) => setEmail(e.target.value)}
                             className="w-full p-3 rounded bg-white border border-gray-300 focus:border-blue-600 outline-none"
                             required
                         />
@@ -202,13 +234,16 @@ function Home() {
                             name="message"
                             placeholder="Your Message" 
                             className="w-full p-3 rounded bg-white border border-gray-300 focus:border-blue-600 outline-none h-32"
+                            value={message} // Bind state
+                            onChange={(e) => setMessage(e.target.value)}
                             required
                         />
                         <button 
                             type="submit" 
                             className="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition"
+                            disabled={loading} // Disable while loading
                         >
-                            Send Message
+                            {loading ? 'Sending...' : 'Send Message'}
                         </button>
                         <div></div>
                     </form>
