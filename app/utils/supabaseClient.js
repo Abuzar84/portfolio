@@ -5,7 +5,4 @@
      const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
 
      export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-     // For server-side operations (e.g., inserts), use service_role
-    //  export const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROLE_KEY);
      

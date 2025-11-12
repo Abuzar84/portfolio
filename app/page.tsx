@@ -34,7 +34,7 @@ function Home() {
         setLoading(true);
 
         // Call API route instead of direct Supabase insert
-        const response = await fetch('/api/route', { // Adjust path if route.js is in /api/route.js
+        const response = await fetch('/api/route', { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, message }),
@@ -240,32 +240,32 @@ function Home() {
                         />
                         <button 
                             type="submit" 
-                            className="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition"
+                            className="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition cursor-pointer"
                             disabled={loading} // Disable while loading
                         >
-                            {loading ? 'Sending...' : 'Send Message'}
+                            Send Message
                         </button>
                         <div></div>
                     </form>
                     {/* Social Links (Moved from Footer) */}
                     <div className="flex flex-wrap items-center justify-center gap-6 text-gray-600">
                         <a href="https://github.com/Abuzar84" aria-label="GitHub" className="hover:text-black">
-                            <Image src={GitHub} alt="GitHub Logo" width={32} height={32} />
+                            <Image src={GitHub} alt="GitHub Logo" width={60}/>
                         </a>
                         <a href="https://www.linkedin.com/in/sayyed-abuzar-6ba990279/" aria-label="LinkedIn">
-                            <Image src={Linkedin} alt="LinkedIn Logo" width={32} height={32} />
+                            <Image src={Linkedin} alt="LinkedIn Logo" width={32}/>
                         </a>
                         <a href="mailto:sayyedabuzar021@gmail.com" className="bg-blue-600 p-1 rounded-full">
                             <Mail className="text-white" />
                         </a>
                         <a href="https://www.facebook.com/sayyed.abuzar.941349">
-                            <Image src={Facebook} alt="Facebook Logo" width={36} height={36} />
+                            <Image src={Facebook} alt="Facebook Logo" width={36}  />
                         </a>
                         <a href="https://www.instagram.com/sayyedabuzar844/" className="bg-white rounded-2xl border p-1">
-                            <Image src={Instagram} alt="Instagram Logo" width={32} height={32} />
+                            <Image src={Instagram} alt="Instagram Logo" width={32} />
                         </a>
                         <a href="https://x.com/SayyedAbuz46392">
-                            <Image src={X} alt="X Logo" width={32} height={32} />
+                            <Image src={X} alt="X Logo" width={32}  />
                         </a>
                     </div>
                     

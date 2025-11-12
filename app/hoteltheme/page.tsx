@@ -23,16 +23,16 @@ function Hoteltheme() {
             Luxury Stay
           </button>
           <div className="flex gap-6">
-            <button onClick={() => scrollToSection(homeRef)} className="hover:text-gray-300 transition-colors">
+            <button onClick={() => scrollToSection(homeRef)} className="hover:text-gray-300 transition-colors cursor-pointer">
               Home
             </button>
-            <button onClick={() => scrollToSection(aboutRef)} className="hover:text-gray-300 transition-colors">
+            <button onClick={() => scrollToSection(aboutRef)} className="hover:text-gray-300 transition-colors cursor-pointer">
               About
             </button>
-            <button onClick={() => scrollToSection(bookingRef)} className="hover:text-gray-300 transition-colors">
+            <button onClick={() => scrollToSection(bookingRef)} className="hover:text-gray-300 transition-colors cursor-pointer">
               Book Now
             </button>
-            <button onClick={() => scrollToSection(contactRef)} className="hover:text-gray-300 transition-colors">
+            <button onClick={() => scrollToSection(contactRef)} className="hover:text-gray-300 transition-colors cursor-pointer">
               Contact
             </button>
           </div>
@@ -59,22 +59,22 @@ function Hoteltheme() {
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <button onClick={() => scrollToSection(homeRef)} className="text-gray-300 hover:text-white">
+                  <button onClick={() => scrollToSection(homeRef)} className="text-gray-300 hover:text-white cursor-pointer">
                     Home
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection(aboutRef)} className="text-gray-300 hover:text-white">
+                  <button onClick={() => scrollToSection(aboutRef)} className="text-gray-300 hover:text-white cursor-pointer">
                     About
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection(bookingRef)} className="text-gray-300 hover:text-white">
+                  <button onClick={() => scrollToSection(bookingRef)} className="text-gray-300 hover:text-white cursor-pointer">
                     Booking
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection(contactRef)} className="text-gray-300 hover:text-white">
+                  <button onClick={() => scrollToSection(contactRef)} className="text-gray-300 hover:text-white cursor-pointer">
                     Contact
                   </button>
                 </li>
@@ -118,7 +118,7 @@ function HotelHome({ homeRef, featuresRef, bookingRef }: HotelHomeProps) {
           <p className="text-xl md:text-2xl mb-8">Experience luxury and comfort</p>
           <button
             onClick={() => scrollToSection(bookingRef)}
-            className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
+            className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book Now
           </button>
@@ -241,7 +241,7 @@ function HotelContact({ contactRef }: { contactRef: React.RefObject<HTMLDivEleme
               </div>
               <button
                 type="submit"
-                className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors"
+                className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 Send Message
               </button>
@@ -299,7 +299,7 @@ function HotelBooking({ bookingRef }: { bookingRef: React.RefObject<HTMLDivEleme
           <div className="text-center pt-4">
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
+              className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors cursor-pointer"
             >
               Book Now
             </button>

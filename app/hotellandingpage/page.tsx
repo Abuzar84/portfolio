@@ -41,10 +41,10 @@ export default function HotelLandingPage() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrolltoref(Homeref)}      className="hover:text-blue-600 transition">Home</button>
-            <button onClick={() => scrolltoref(Amenitiesref)} className="hover:text-blue-600 transition">Amenities</button>
-            <button onClick={() => scrolltoref(Roomref)}      className="hover:text-blue-600 transition">Rooms</button>
-            <button onClick={() => scrolltoref(Bookingref)}   className="hover:text-blue-600 transition">Booking</button>
+            <button onClick={() => scrolltoref(Homeref)}      className="hover:text-blue-600 transition cursor-pointer">Home</button>
+            <button onClick={() => scrolltoref(Amenitiesref)} className="hover:text-blue-600 transition cursor-pointer">Amenities</button>
+            <button onClick={() => scrolltoref(Roomref)}      className="hover:text-blue-600 transition cursor-pointer">Rooms</button>
+            <button onClick={() => scrolltoref(Bookingref)}   className="hover:text-blue-600 transition cursor-pointer">Booking</button>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -53,7 +53,7 @@ export default function HotelLandingPage() {
             </p>
             <button
               onClick={() => scrolltoref(Bookingref)}
-              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer "
             >
               Book Now
             </button>
@@ -115,10 +115,10 @@ export default function HotelLandingPage() {
           <div>
             <h3 className="text-lg font-bold mb-2">Quick Links</h3>
             <nav className="space-y-1">
-              <button onClick={() => scrolltoref(Homeref)}      className="block text-gray-300 hover:text-white">Home</button>
-              <button onClick={() => scrolltoref(Amenitiesref)} className="block text-gray-300 hover:text-white">Amenities</button>
-              <button onClick={() => scrolltoref(Roomref)}      className="block text-gray-300 hover:text-white">Rooms</button>
-              <button onClick={() => scrolltoref(Bookingref)}   className="block text-gray-300 hover:text-white">Booking</button>
+              <button onClick={() => scrolltoref(Homeref)}      className="block text-gray-300 hover:text-white cursor-pointer">Home</button>
+              <button onClick={() => scrolltoref(Amenitiesref)} className="block text-gray-300 hover:text-white cursor-pointer">Amenities</button>
+              <button onClick={() => scrolltoref(Roomref)}      className="block text-gray-300 hover:text-white cursor-pointer">Rooms</button>
+              <button onClick={() => scrolltoref(Bookingref)}   className="block text-gray-300 hover:text-white cursor-pointer">Booking</button>
             </nav>
           </div>
 
@@ -178,13 +178,13 @@ function HotellandbgHome({
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => scrolltoref(Bookingref)}
-            className="bg-white text-black px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition"
+            className="bg-white text-black px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition cursor-pointer"
           >
-            <Calendar className="w-5 h-5" /> Book Now
+            <Calendar className="w-5 h-5 " /> Book Now
           </button>
           <button
             onClick={() => scrolltoref(Roomref)}
-            className="bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+            className="bg-white cursor-pointer text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           >
             Explore Rooms
           </button>
@@ -277,7 +277,7 @@ function HotelAndingRooms({
                   </div>
                   <button
                     onClick={() => scrolltoref(Bookingref)}
-                    className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition"
+                    className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer"
                   >
                     Book Now
                   </button>
@@ -333,7 +333,7 @@ function HotelAndingBooking() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition cursor-pointer"
           >
             Check Availability
           </button>
