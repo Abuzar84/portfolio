@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await supabase
-      .from('messages')
+      .from('userMessages')
       .insert([{ email, message }]);
 
     if (error) {
