@@ -243,7 +243,7 @@ function Home() {
                     <button
                     type="submit"
                     disabled={status.type === "loading"}
-                    className="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 disabled:opacity-70 transition"
+                    className="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 disabled:opacity-70 transition cursor-pointer"
                     >
                     {status.type === "loading" ? "Sending…" : "Send Message"}
                     </button>
