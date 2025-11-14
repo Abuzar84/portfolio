@@ -1,4 +1,3 @@
-// app/api/contact/route.ts
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
 
@@ -16,7 +15,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export async function POST(request: Request) {
   try {
-    const { email, message } = await request.json();
+    const { user_id, email, message } = await request.json();
 
     if (!email || !message) {
       return NextResponse.json({ error: "Email and message required" }, { status: 400 });
@@ -24,7 +23,7 @@ export async function POST(request: Request) {
 
     const { error } = await supabase
       .from('userMessage')
-      .insert([{ email, message }]);
+      .insert([{user_id, email, message }]);
 
     if (error) {
       console.error("Supabase insert error:", error);
