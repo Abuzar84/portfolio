@@ -15,7 +15,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export async function POST(request: Request) {
   try {
-    const { user_id, email, message } = await request.json();
+    const { email, message } = await request.json();
 
     if (!email || !message) {
       return NextResponse.json({ error: "Email and message required" }, { status: 400 });
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
     const { error } = await supabase
       .from('userMessage')
-      .insert([{user_id, email, message }]);
+      .insert([{ email, message }]);
 
     if (error) {
       console.error("Supabase insert error:", error);

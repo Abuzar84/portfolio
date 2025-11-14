@@ -44,7 +44,6 @@ function Home() {
 
         const form = e.currentTarget;
         const data = {
-        name: (form.user_id as HTMLInputElement).value.trim(),
         email: (form.email as HTMLInputElement).value.trim(),
         message: (form.message as HTMLTextAreaElement).value.trim(),
         };
@@ -234,13 +233,6 @@ function Home() {
                 <section ref={ContactRef} className="py-16 bg-linear-to-b from-gray-100 to-gray-200 text-center">
                     <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
                     <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 mb-6">
-                    <input
-                    name="Name"
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                    className="w-full p-3 rounded border border-gray-300 focus:border-blue-600 outline-none"
-                    />
                     <input
                     name="email"
                     type="email"
