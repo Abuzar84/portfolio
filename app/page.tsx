@@ -58,7 +58,7 @@ function Home() {
         const json = await res.json();
 
         if (res.ok) {
-            setStatus({ type: "success", msg: "Message sent!" });
+            setStatus({ type: "success", msg: "Thanks! I'll get back soon." });
             form.reset();
         } else {
             setStatus({ type: "error", msg: json.error ?? "Something went wrong" });

@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import bgimage from '../hotelthemes/backgroundHotel.webp';
+import Contactform from './contactform';
 
 const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
   ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -205,47 +206,7 @@ function HotelContact({ contactRef }: { contactRef: React.RefObject<HTMLDivEleme
         <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-gray-700 mb-2" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-black"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-black"
-                  placeholder="Your email"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 mb-2" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-black"
-                  placeholder="Your message"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
-              >
-                Send Message
-              </button>
-            </form>
+              <Contactform />
           </div>
         </div>
       </div>
