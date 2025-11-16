@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
-      return NextResponse.json({ error: "Email and message required" }, { status: 400 });
+      return NextResponse.json({ error: "name, Email and message required" }, { status: 400 });
     }
 
     const { error } = await supabase

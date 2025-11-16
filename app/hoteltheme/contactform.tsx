@@ -44,7 +44,6 @@ export default function  Contactform() {
             <input
                 type="text"
                 name="username"
-                id="name"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-black"
                 placeholder="Your name"
             />
