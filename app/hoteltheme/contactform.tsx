@@ -12,7 +12,7 @@ export default function  Contactform() {
         setStatus({ type: "loading", msg: "Sending…" });
         const form = e.currentTarget;
         const data = {
-        uname: (form.username as HTMLInputElement).value.trim(),
+        name: (form.username as HTMLInputElement).value.trim(),
         email: (form.email as HTMLInputElement).value.trim(),
         message: (form.message as HTMLTextAreaElement).value.trim(),
     };
