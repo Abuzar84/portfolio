@@ -17,7 +17,7 @@ export default function  Contactform() {
         message: (form.message as HTMLTextAreaElement).value.trim(),
     };
     try {
-        const res = await fetch("/api/contact/hoteltheme", {
+        const res = await fetch("/api/contact/hoteltheme/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
@@ -77,9 +77,15 @@ export default function  Contactform() {
             >
                 Send Message
             </button>
-            <span>
-                {status.msg}
-            </span>
+            <div className="w-full text-center">
+                {status.type !== "idle" && status.type !== "loading" && (
+                    <p
+                        className={`mt-2 ${status.type === "success" ? "text-green-600" : "text-red-600"}`}
+                    >
+                        {status.msg}
+                    </p>
+                )}
+            </div>
         </form>
     );
 }

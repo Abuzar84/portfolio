@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import bgimage from '../hotelthemes/backgroundHotel.webp';
 import Contactform from './contactform';
+import Bookingform from './bookingform'
 
 const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
   ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -224,48 +225,7 @@ function HotelBooking({ bookingRef }: { bookingRef: React.RefObject<HTMLDivEleme
     >
       <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-md w-full mx-4">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Book Your Stay</h2>
-        <form className="space-y-5">
-          <div>
-            <label htmlFor="checkin" className="block text-sm font-medium text-gray-700 mb-1">
-              Check-in Date
-            </label>
-            <input
-              type="date"
-              id="checkin"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-            />
-          </div>
-          <div>
-            <label htmlFor="checkout" className="block text-sm font-medium text-gray-700 mb-1">
-              Check-out Date
-            </label>
-            <input
-              type="date"
-              id="checkout"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-            />
-          </div>
-          <div>
-            <label htmlFor="guests" className="block text-sm font-medium text-gray-700 mb-1">
-              Number of Guests
-            </label>
-            <input
-              type="number"
-              id="guests"
-              min={1}
-              defaultValue={1}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-            />
-          </div>
-          <div className="text-center pt-4">
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors cursor-pointer"
-            >
-              Book Now
-            </button>
-          </div>
-        </form>
+        <Bookingform />
       </div>
     </div>
   );
