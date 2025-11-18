@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import Bookingform from "./hotellandingform";
+
 import {
   Wifi, Phone, Waves, Utensils, Dumbbell, Coffee, Car,
   Star, Calendar, Users, Maximize, IndianRupee, MapPin, Mail
@@ -300,44 +302,7 @@ function HotelAndingBooking() {
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book Your Stay?</h2>
         <p className="text-white mb-12">Choose your dates and let us make your visit unforgettable</p>
-
-        <form className="bg-white p-8 rounded-2xl shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label htmlFor="checkin" className="block text-left mb-2 font-medium">Check-in Date</label>
-              <div className="relative">
-                <input type="date" id="checkin" className="w-full p-3 pr-10 border rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
-                <Calendar className="absolute right-3 top-3.5 w-5 h-5 text-gray-500 pointer-events-none" />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="checkout" className="block text-left mb-2 font-medium">Check-out Date</label>
-              <div className="relative">
-                <input type="date" id="checkout" className="w-full p-3 pr-10 border rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
-                <Calendar className="absolute right-3 top-3.5 w-5 h-5 text-gray-500 pointer-events-none" />
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6">
-            <label htmlFor="guests" className="block text-left mb-2 font-medium">Number of Guests</label>
-            <select id="guests" className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-              <option>1 Guest</option>
-              <option>2 Guests</option>
-              <option>3 Guests</option>
-              <option>4 Guests</option>
-              <option>5+ Guests</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition cursor-pointer"
-          >
-            Check Availability
-          </button>
-        </form>
+          <Bookingform />
       </div>
     </section>
   );

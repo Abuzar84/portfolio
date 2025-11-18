@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import bgimage from '../hotelthemes/backgroundHotel.webp';
 import Contactform from './contactform';
-import Bookingform from './bookingform'
+import Bookingform from './bookingform';
 
 const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
   ref.current?.scrollIntoView({ behavior: 'smooth' });
