@@ -26,7 +26,33 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script type="text/javascript" src="https://embeds.iubenda.com/widgets/d94344cc-642e-4513-9507-7a1f1b324745.js" async defer></script> 
-      </head>
+      {/* Google tag (gtag.js) */}
+      <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-9T2D933YZV"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              // Default: sab denied – iubenda accept karne pe granted karega
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+              });
+
+              // IP anonymize (GDPR ke liye best)
+              gtag('config', 'G-9T2D933YZV', {
+                anonymize_ip: true
+              });
+            `,
+          }}
+        />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
