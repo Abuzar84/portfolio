@@ -25,9 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script type="text/javascript" src="https://embeds.iubenda.com/widgets/d94344cc-642e-4513-9507-7a1f1b324745.js" async defer></script> 
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
