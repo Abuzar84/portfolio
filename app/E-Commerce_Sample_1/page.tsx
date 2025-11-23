@@ -42,11 +42,22 @@ export default function main(){
                     </div>
                 </div>
             </header>
-            <main className="bg-gray-100"> 
+            <main className="bg-gray-50"> 
                 <div>
-                    <div>
-                        <h2 className="text-5xl font-extrabold">FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE</h2>
+                    <div className="px-15 py-15">
+                        <h2 className="text-6xl font-extrabold">FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE</h2>
+                        <p className="text-[15px] text-gray-400 py-5">Browse through our diverse range of meticulously crafted garments, designed <br /> to bring out your individuality and cater to your sense of style.</p>
+                        <button className="bg-black text-white py-3 px-12 rounded-full">
+                            Shop Now
+                        </button>
+                        <div className="pt-5 ">
+                            <h3 className="text-[50px] ">
+                                200+
+                            </h3>
+                            <p className="text-gray-400">International Brands</p>
+                        </div>
                     </div>
+                    
                 </div>
             </main>
         </div>
