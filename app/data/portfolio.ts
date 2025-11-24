@@ -1,5 +1,6 @@
 import Hoteltheme from '../hotelthemes/Hoteltheme.webp';
 import Hotellandpageimage from '../hotelthemes/hotellandingpage1.webp';
+import EcommercePreview from '../ecommerce/ecommerce-preview.webp';
 
 import Facebook from "../Icons/Facebook_Logo_Primary.png";
 import Instagram from '../Icons/Instagram_Glyph_Gradient.svg';
@@ -25,6 +26,12 @@ export const projects = [
     title: "Hotel Landing Page",
     image: Hotellandpageimage,
     link: "/hotellandingpage",
+  },
+  {
+    id: 3,
+    title: "E-Commerce Store",
+    image: EcommercePreview,
+    link: "/ecommerce",
   },
 ];
 
