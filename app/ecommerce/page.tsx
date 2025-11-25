@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, Search, Menu, X, Heart, Star, ChevronRight, TrendingUp, Zap, Shield } from 'lucide-react';
+import { ShoppingCart, Search, Menu, X, Heart, Star, ChevronRight, TrendingUp, Zap, Shield, User } from 'lucide-react';
 
 // Product data
 const products = [
@@ -147,6 +147,10 @@ export default function EcommercePage() {
                                 <Search className="w-5 h-5 text-gray-600" />
                                 <span className="text-sm text-gray-600">Search</span>
                             </button>
+
+                            <Link href="/ecommerce/login" className="p-2 hover:bg-purple-50 rounded-full transition-colors">
+                                <User className="w-6 h-6 text-gray-700" />
+                            </Link>
 
                             <button className="relative p-2 hover:bg-purple-50 rounded-full transition-colors">
                                 <Heart className="w-6 h-6 text-gray-700" />
