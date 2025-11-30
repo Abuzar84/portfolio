@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.abuzarsayyed.in/'; 
+  const baseUrl = 'https://www.abuzarsayyed.in';
 
   return [
     {
@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/hotellandingpage`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ecommerce`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
